@@ -1,4 +1,4 @@
-# Sharing Vision - Article Post - Frontend
+# Sharing Vision Frontend
 
 Dashboard React untuk mengelola artikel Sharing Vision. Stack: React, TypeScript, Vite, Tailwind CSS, React Router, dan Lucide icons.
 
@@ -6,15 +6,9 @@ Dashboard React untuk mengelola artikel Sharing Vision. Stack: React, TypeScript
 
 - Node.js 22+
 - npm
-- Backend Sharing Vision berjalan di `http://127.0.0.1:8000`
+- API backend berjalan dan dapat diakses dari browser.
 
 ## Setup
-
-Masuk folder frontend:
-
-```bash
-cd frontend
-```
 
 Install dependencies:
 
@@ -36,13 +30,13 @@ http://localhost:5173
 
 ## Konfigurasi API
 
-Default API base URL:
+Default API base URL adalah:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-Jika perlu mengganti URL backend, buat file `.env` di folder `frontend`:
+Jika perlu mengganti URL backend, buat file `.env` di root project:
 
 ```env
 VITE_API_BASE_URL=http://127.0.0.1:8000
@@ -91,7 +85,7 @@ Backend sudah diizinkan menerima request dari:
 - `http://localhost:4173`
 - `http://127.0.0.1:4173`
 
-Jika frontend dibuka dari IP LAN atau domain deploy, tambahkan origin persis ke `CORS_ORIGINS` di `backend/.env`, misalnya:
+Jika frontend dibuka dari IP LAN atau domain deploy, tambahkan origin persis ke konfigurasi CORS backend, misalnya:
 
 ```env
 CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://192.168.1.10:5173
